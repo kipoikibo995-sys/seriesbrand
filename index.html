@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Series Brand Kit — Ocean Novel</title>
+<meta name="description" content="Turn your first picture book into a brand for the whole series. 100% in your browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="narrow" class="narrow">Best on a laptop or desktop — the Brand Kit needs a wide screen (1280 px+).</div>
+<div id="app" class="app">
+  <header class="top">
+    <div class="brand"><svg viewBox="0 0 32 32" class="mark" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#E8561F"/><path d="M3 19c4-4 7 4 11 0s7 4 11 0 4 2 4 2v6H3z" fill="#F6F1E7"/></svg>
+      <div><div class="brand-t">Series Brand Kit<span class="dot">.</span></div><div class="brand-s" id="projName">Untitled series</div></div></div>
+    <div class="top-actions">
+      <button class="btn ghost" id="bNew">New</button>
+      <button class="btn ghost" id="bOpen">Open .sbk</button>
+      <button class="btn ghost" id="bSave">Save .sbk</button>
+      <span class="sep"></span>
+      <button class="btn icon" id="bUndo" title="Undo (Ctrl+Z)" aria-label="Undo">↶</button>
+      <button class="btn icon" id="bRedo" title="Redo (Ctrl+Y)" aria-label="Redo">↷</button>
+      <button class="btn" id="bAll">Export everything</button>
+    </div>
+  </header>
+  <div class="body">
+    <nav class="rail" id="rail" aria-label="Steps"></nav>
+    <main class="stage-wrap">
+      <div class="stage-bar" id="stageBar"></div>
+      <div class="stage" id="stage"></div>
+    </main>
+    <aside class="panel" id="panel"></aside>
+  </div>
+</div>
+<div id="toast" class="toast" role="status"></div>
+<div id="progress" class="progress" hidden><div class="pbar"><i></i></div><span></span></div>
+<dialog id="dlg"></dialog>
+<input type="file" id="fileSbk" accept=".sbk,application/zip" hidden>
+<input type="file" id="fileImg" accept="image/png,image/jpeg,image/webp" hidden>
+<script src="lib/jszip.min.js"></script>
+<script src="lib/jspdf.umd.min.js"></script>
+<script src="lib/opentype.min.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
